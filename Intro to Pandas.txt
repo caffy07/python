@@ -1,0 +1,15 @@
+#Here replace players, employees, df by the value required
+
+1. Create a DataFrame from a List: pd.DataFrame(players, columns = ['players_name', 'players_id'])
+2. Get Size of DataFrame: list(players.shape)    #here replace players by the value required
+3. Display first 3 rows: players.head(3)
+4. Select Data: players.loc[players['player_id'] == 101, ['name', 'age']]
+5. Create a new column or Modify any column: employees['bonus'] = employees['salary'] * 2
+6. Drop duplicates: employees.drop_duplicates('email')
+7. Rename Columns: df.rename(columns={'old_name': 'new_name', 'old_name':'new_name'})
+8. Change Data Type:  players['runs'] = players['runs'].astype('int')
+9. Fill Missing Data: players['quantity'] = players['quantity'].fillna(0)
+10. Reshape Data, Concatenate: pd.concat([player1, player2])
+11. Reshape Data for Pivot: df = employees.pivot(index = "month", columns = "city", values = 'temperature')
+12. Reshape Data for Melt: pd.melt(report, id_vars=['product'], var_name='quarter', value_name='sales')
+13. Method Chaining(selecting particular values based on the given condition): players[players['weight'] > 100].sort_values(['weight'],ascending=False)[['name']]
